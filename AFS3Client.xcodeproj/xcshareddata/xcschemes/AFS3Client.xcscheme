@@ -16,7 +16,21 @@
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "223B9547174CDF52007765BC"
                BuildableName = "AFS3Client.framework"
-               BlueprintName = "AFS3Client"
+               BlueprintName = "AFS3Client Framework"
+               ReferencedContainer = "container:AFS3Client.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "22DB9F0A174E7DF600586D79"
+               BuildableName = "libAFS3Client.a"
+               BlueprintName = "AFS3Client library"
                ReferencedContainer = "container:AFS3Client.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>

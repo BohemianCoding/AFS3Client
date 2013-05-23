@@ -13,6 +13,9 @@
 		223B9592174CE40C007765BC /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 223B9591174CE40C007765BC /* SystemConfiguration.framework */; };
 		223B9594174CE410007765BC /* AFNetworking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 223B9593174CE410007765BC /* AFNetworking.framework */; };
 		223B959D174CE52E007765BC /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 223B959A174CE517007765BC /* InfoPlist.strings */; };
+		22DB9F0C174E7DF600586D79 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 223B954B174CDF52007765BC /* Cocoa.framework */; };
+		22DB9F16174E7E7900586D79 /* AFS3Client.h in Headers */ = {isa = PBXBuildFile; fileRef = 223B9589174CE303007765BC /* AFS3Client.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		22DB9F17174E7E7F00586D79 /* AFS3Client.m in Sources */ = {isa = PBXBuildFile; fileRef = 223B958A174CE303007765BC /* AFS3Client.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +31,7 @@
 		223B9597174CE517007765BC /* AFS3Client-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "AFS3Client-Info.plist"; sourceTree = "<group>"; };
 		223B9598174CE517007765BC /* AFS3Client-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AFS3Client-Prefix.pch"; sourceTree = "<group>"; };
 		223B959B174CE517007765BC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = InfoPlist.strings; sourceTree = "<group>"; };
+		22DB9F0B174E7DF600586D79 /* libAFS3Client.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libAFS3Client.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,6 +42,14 @@
 				223B9594174CE410007765BC /* AFNetworking.framework in Frameworks */,
 				223B9592174CE40C007765BC /* SystemConfiguration.framework in Frameworks */,
 				223B954C174CDF52007765BC /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		22DB9F08174E7DF600586D79 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				22DB9F0C174E7DF600586D79 /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -57,6 +69,7 @@
 			isa = PBXGroup;
 			children = (
 				223B9548174CDF52007765BC /* AFS3Client.framework */,
+				22DB9F0B174E7DF600586D79 /* libAFS3Client.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -113,12 +126,20 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		22DB9F09174E7DF600586D79 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				22DB9F16174E7E7900586D79 /* AFS3Client.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		223B9547174CDF52007765BC /* AFS3Client */ = {
+		223B9547174CDF52007765BC /* AFS3Client Framework */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 223B955D174CDF52007765BC /* Build configuration list for PBXNativeTarget "AFS3Client" */;
+			buildConfigurationList = 223B955D174CDF52007765BC /* Build configuration list for PBXNativeTarget "AFS3Client Framework" */;
 			buildPhases = (
 				223B9543174CDF52007765BC /* Sources */,
 				223B9544174CDF52007765BC /* Frameworks */,
@@ -129,10 +150,27 @@
 			);
 			dependencies = (
 			);
-			name = AFS3Client;
+			name = "AFS3Client Framework";
 			productName = AFNetworking;
 			productReference = 223B9548174CDF52007765BC /* AFS3Client.framework */;
 			productType = "com.apple.product-type.framework";
+		};
+		22DB9F0A174E7DF600586D79 /* AFS3Client library */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 22DB9F15174E7DF600586D79 /* Build configuration list for PBXNativeTarget "AFS3Client library" */;
+			buildPhases = (
+				22DB9F07174E7DF600586D79 /* Sources */,
+				22DB9F08174E7DF600586D79 /* Frameworks */,
+				22DB9F09174E7DF600586D79 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "AFS3Client library";
+			productName = library;
+			productReference = 22DB9F0B174E7DF600586D79 /* libAFS3Client.a */;
+			productType = "com.apple.product-type.library.static";
 		};
 /* End PBXNativeTarget section */
 
@@ -155,7 +193,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				223B9547174CDF52007765BC /* AFS3Client */,
+				223B9547174CDF52007765BC /* AFS3Client Framework */,
+				22DB9F0A174E7DF600586D79 /* AFS3Client library */,
 			);
 		};
 /* End PBXProject section */
@@ -177,6 +216,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				223B958C174CE303007765BC /* AFS3Client.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		22DB9F07174E7DF600586D79 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				22DB9F17174E7E7F00586D79 /* AFS3Client.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -265,7 +312,7 @@
 				GCC_PREFIX_HEADER = "AFS3Client/AFS3Client-Prefix.pch";
 				INFOPLIST_FILE = "AFS3Client/AFS3Client-Info.plist";
 				INSTALL_PATH = "@rpath";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = AFS3Client;
 				SKIP_INSTALL = YES;
 				WRAPPER_EXTENSION = framework;
 			};
@@ -282,9 +329,33 @@
 				GCC_PREFIX_HEADER = "AFS3Client/AFS3Client-Prefix.pch";
 				INFOPLIST_FILE = "AFS3Client/AFS3Client-Info.plist";
 				INSTALL_PATH = "@rpath";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = AFS3Client;
 				SKIP_INSTALL = YES;
 				WRAPPER_EXTENSION = framework;
+			};
+			name = Release;
+		};
+		22DB9F13174E7DF600586D79 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "AFS3Client/AFS3Client-Prefix.pch";
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				PRODUCT_NAME = AFS3Client;
+				PUBLIC_HEADERS_FOLDER_PATH = "includes/$(PRODUCT_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		22DB9F14174E7DF600586D79 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "AFS3Client/AFS3Client-Prefix.pch";
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				PRODUCT_NAME = AFS3Client;
+				PUBLIC_HEADERS_FOLDER_PATH = "includes/$(PRODUCT_NAME)";
+				SKIP_INSTALL = YES;
 			};
 			name = Release;
 		};
@@ -300,7 +371,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		223B955D174CDF52007765BC /* Build configuration list for PBXNativeTarget "AFS3Client" */ = {
+		223B955D174CDF52007765BC /* Build configuration list for PBXNativeTarget "AFS3Client Framework" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				223B955E174CDF52007765BC /* Debug */,
@@ -308,6 +379,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		22DB9F15174E7DF600586D79 /* Build configuration list for PBXNativeTarget "AFS3Client library" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				22DB9F13174E7DF600586D79 /* Debug */,
+				22DB9F14174E7DF600586D79 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};
