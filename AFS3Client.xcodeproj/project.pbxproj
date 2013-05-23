@@ -340,14 +340,14 @@
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "AFS3Client/AFS3Client-Prefix.pch";
-				HEADER_SEARCH_PATHS = "$(BUILT_PRODUCTS_DIR)/includes";
-				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				HEADER_SEARCH_PATHS = "$(TARGET_BUILD_DIR)";
+				INSTALL_PATH = "";
 				OTHER_LDFLAGS = (
 					"-ObjC",
 					"-all_load",
 				);
 				PRODUCT_NAME = AFS3Client;
-				PUBLIC_HEADERS_FOLDER_PATH = "includes/$(PRODUCT_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "$(PRODUCT_NAME)";
 				SKIP_INSTALL = YES;
 			};
 			name = Debug;
@@ -357,14 +357,14 @@
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "AFS3Client/AFS3Client-Prefix.pch";
-				HEADER_SEARCH_PATHS = "$(BUILT_PRODUCTS_DIR)/includes";
-				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				HEADER_SEARCH_PATHS = "$(TARGET_BUILD_DIR)";
+				INSTALL_PATH = "";
 				OTHER_LDFLAGS = (
 					"-ObjC",
 					"-all_load",
 				);
 				PRODUCT_NAME = AFS3Client;
-				PUBLIC_HEADERS_FOLDER_PATH = "includes/$(PRODUCT_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "$(PRODUCT_NAME)";
 				SKIP_INSTALL = YES;
 			};
 			name = Release;
@@ -397,6 +397,7 @@
 				22DB9F14174E7DF600586D79 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
