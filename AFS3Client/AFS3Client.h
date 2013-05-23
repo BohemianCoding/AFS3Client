@@ -24,7 +24,10 @@
 // THE SOFTWARE.
 
 
-#import <AFNetworking/AFNetworking.h>
+#ifndef _AFNETWORKING_
+    #import "AFNetworking.h"
+#endif
+
 #import <CommonCrypto/CommonHMAC.h>
 
 // See http://docs.amazonwebservices.com/AmazonS3/2006-03-01/index.html?RESTAccessPolicy.html for what these mean
