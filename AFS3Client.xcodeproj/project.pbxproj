@@ -340,7 +340,7 @@
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "AFS3Client/AFS3Client-Prefix.pch";
-				HEADER_SEARCH_PATHS = "$(TARGET_BUILD_DIR)";
+				HEADER_SEARCH_PATHS = "\"$(TARGET_BUILD_DIR)\"";
 				INSTALL_PATH = "";
 				OTHER_LDFLAGS = (
 					"-ObjC",
@@ -357,7 +357,7 @@
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "AFS3Client/AFS3Client-Prefix.pch";
-				HEADER_SEARCH_PATHS = "$(TARGET_BUILD_DIR)";
+				HEADER_SEARCH_PATHS = "\"$(TARGET_BUILD_DIR)\"";
 				INSTALL_PATH = "";
 				OTHER_LDFLAGS = (
 					"-ObjC",
