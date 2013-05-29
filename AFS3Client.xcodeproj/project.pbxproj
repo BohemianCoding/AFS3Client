@@ -340,14 +340,14 @@
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "AFS3Client/AFS3Client-Prefix.pch";
-				HEADER_SEARCH_PATHS = "\"$(TARGET_BUILD_DIR)\"";
+				HEADER_SEARCH_PATHS = "\"$(TARGET_BUILD_DIR)/include\"";
 				INSTALL_PATH = "";
 				OTHER_LDFLAGS = (
 					"-ObjC",
 					"-all_load",
 				);
 				PRODUCT_NAME = AFS3Client;
-				PUBLIC_HEADERS_FOLDER_PATH = "$(PRODUCT_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "include/$(PRODUCT_NAME)";
 				SKIP_INSTALL = YES;
 			};
 			name = Debug;
@@ -357,14 +357,14 @@
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "AFS3Client/AFS3Client-Prefix.pch";
-				HEADER_SEARCH_PATHS = "\"$(TARGET_BUILD_DIR)\"";
+				HEADER_SEARCH_PATHS = "\"$(TARGET_BUILD_DIR)/include\"";
 				INSTALL_PATH = "";
 				OTHER_LDFLAGS = (
 					"-ObjC",
 					"-all_load",
 				);
 				PRODUCT_NAME = AFS3Client;
-				PUBLIC_HEADERS_FOLDER_PATH = "$(PRODUCT_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "include/$(PRODUCT_NAME)";
 				SKIP_INSTALL = YES;
 			};
 			name = Release;
